@@ -3,6 +3,10 @@
 import React from "react";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { TextReveal } from "@/components/magicui/text-reveal";
+import { IconCloud } from "@/components/magicui/icon-cloud";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+
 
 // SVG Icons
 const Icons = {
