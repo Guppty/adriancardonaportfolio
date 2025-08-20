@@ -24,21 +24,21 @@ const Icons = {
 };
 
 // Dock component (fixed top)
-export function DockDemo() {
+function DockDemo() {
   return (
-    <div style={{ position: "fixed", top: "10px", left: "50%", transform: "translateX(-50%)", zIndex: 1000 }}>
+    <div style={{ position: "fixed", top: "10px", left: "50%", transform: "translateX(-50%)", zIndex: 1000, width: "220px", display: "flex", justifyContent: "space-between" }}>
       <Dock direction="middle">
-        <DockIcon>
+        <DockIcon style={{ transformOrigin: "center" }}>
           <a href="/" aria-label="Home">
             <Icons.home width={40} height={40} />
           </a>
         </DockIcon>
-        <DockIcon>
+        <DockIcon style={{ transformOrigin: "center" }}>
           <a href="https://github.com/Guppty" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <Icons.github width={40} height={40} />
           </a>
         </DockIcon>
-        <DockIcon>
+        <DockIcon style={{ transformOrigin: "center" }}>
           <a href="https://www.linkedin.com/in/adrian-cardona/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Icons.linkedin width={40} height={40} />
           </a>
@@ -48,32 +48,55 @@ export function DockDemo() {
   );
 }
 
-// Page component
+// Main Page Component
 export default function Home() {
   return (
-    <main style={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "100vh" }}>
+    <main style={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "100vh", padding: "40px 20px" }}>
       {/* Fixed Dock */}
       <DockDemo />
 
-      {/* Spacer to prevent dock overlap */}
+      {/* Spacer */}
       <div style={{ height: "80px" }} />
 
-      {/* TextReveal */}
-      <div style={{ textAlign: "center" }}>
-        <TextReveal style={{ fontSize: "2rem", fontWeight: "bold" }}>
-          Hello 
-          I'm Adrian Cardona 
-          I'm a Computer Science Student 
-          at California Polytechnic University, San Luis Obispo
+      {/* Intro Section */}
+      <section style={{ textAlign: "center", marginBottom: "60px" }}>
+        <TextReveal style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "20px" }}>
+          Hello, I'm Adrian Cardona
         </TextReveal>
-      </div>
+        <TextReveal style={{ fontSize: "1.5rem", marginBottom: "15px" }}>
+          Research Intern @ FoundationCCC
+        </TextReveal>
+        <TextReveal style={{ fontSize: "1.5rem", marginBottom: "15px" }}>
+          Incoming Computer Science Student @ Cal Poly SLO
+        </TextReveal>
+        <TextReveal style={{ fontSize: "1rem", lineHeight: "1.5", whiteSpace: "pre-line" }}>
+          {"I'm an incoming junior at California Polytechnic University, San Luis Obispo, pursuing my bachelor's in Computer Science.\n\nBefore transferring, I graduated from Los Angeles Harbor College with an associate’s degree in Computer Science. I was recognized on the Dean’s Honor Roll and named a President’s Distinguished Student while participating in MESA, the Honors Program, and EOPS. I also worked part-time at a nonprofit, balancing academics and work experience."}
+        </TextReveal>
+      </section>
 
-      {/* Additional content example */}
-      <div style={{ marginTop: "60px", maxWidth: "600px", textAlign: "center" }}>
-        <p>
-          This is an example of a second section. Even with more content, the dock stays fixed at the top and never overlaps your text.
-        </p>
-      </div>
+      {/* Experience Section */}
+      <section style={{ width: "80%", maxWidth: "800px", marginBottom: "60px" }}>
+        <TextReveal style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "20px" }}>Experience</TextReveal>
+        <TextReveal style={{ whiteSpace: "pre-line", lineHeight: "1.5" }}>
+          {"AI Powered Document Insights Externship · Extern (Feb 2025 - Apr 2025)\n- Completed a structured externship with Outamation via Extern program\n- Developed Python-based RAG pipeline to extract key data from unstructured PDFs using Tesseract OCR and PyPDF2\n- Fine-tuned the pipeline with LlamaIndex to answer mortgage/lease questions and optimized embedding/chunking\n\nStudent Researcher · FoundationCCC (Jul 2025 - Present)\n- Engaged in research projects at FoundationCCC\n\nPython Object Detector Project (Feb 2025 - Present)\n- Built a real-time object detector in Python/OpenCV that identifies faces, bodies, and objects via webcam"}
+        </TextReveal>
+      </section>
+
+      {/* Education Section */}
+      <section style={{ width: "80%", maxWidth: "800px", marginBottom: "60px" }}>
+        <TextReveal style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "20px" }}>Education</TextReveal>
+        <TextReveal style={{ whiteSpace: "pre-line", lineHeight: "1.5" }}>
+          {"California Polytechnic State University, San Luis Obispo\nBachelor's degree, Computer Science (2025 - 2027)\n\nLos Angeles Harbor College\nAssociate's degree, Computer Science (2023 - 2025)"}
+        </TextReveal>
+      </section>
+
+      {/* Skills Section */}
+      <section style={{ width: "80%", maxWidth: "800px", marginBottom: "60px" }}>
+        <TextReveal style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "20px" }}>Skills</TextReveal>
+        <TextReveal style={{ whiteSpace: "pre-line", lineHeight: "1.5" }}>
+          {"HTML, GitHub, Python, OpenCV, LlamaIndex, PyPDF2, Tesseract OCR, AI, RAG Pipelines, Object Detection, Computer Vision, Project Management"}
+        </TextReveal>
+      </section>
     </main>
   );
 }
