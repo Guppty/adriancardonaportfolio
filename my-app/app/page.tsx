@@ -73,18 +73,10 @@ export default function Home() {
         <TextReveal style={{ fontSize: "1.5rem", marginBottom: "15px" }}>
           Incoming Computer Science Student @ Cal Poly SLO
         </TextReveal>
-        <TextReveal style={{ fontSize: "1rem", lineHeight: "1.5", whiteSpace: "pre-line" }}>
-          {"I'm an incoming junior at California Polytechnic University, San Luis Obispo, pursuing my bachelor's in Computer Science.\n\nBefore transferring, I graduated from Los Angeles Harbor College with an associate’s degree in Computer Science. I was recognized on the Dean’s Honor Roll and named a President’s Distinguished Student while participating in MESA, the Honors Program, and EOPS. I also worked part-time at a nonprofit, balancing academics and work experience."}
-        </TextReveal>
       </section>
 
       {/* Experience Section */}
-      <section style={{ width: "80%", maxWidth: "800px", marginBottom: "60px" }}>
-        <TextReveal style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "20px" }}>Experience</TextReveal>
-        <TextReveal style={{ whiteSpace: "pre-line", lineHeight: "1.5" }}>
-          {"AI Powered Document Insights Externship · Extern (Feb 2025 - Apr 2025)\n- Completed a structured externship with Outamation via Extern program\n- Developed Python-based RAG pipeline to extract key data from unstructured PDFs using Tesseract OCR and PyPDF2\n- Fine-tuned the pipeline with LlamaIndex to answer mortgage/lease questions and optimized embedding/chunking\n\nStudent Researcher · FoundationCCC (Jul 2025 - Present)\n- Engaged in research projects at FoundationCCC\n\nPython Object Detector Project (Feb 2025 - Present)\n- Built a real-time object detector in Python/OpenCV that identifies faces, bodies, and objects via webcam"}
-        </TextReveal>
-      </section>
+   
 
       {/* Education Section */}
       <section style={{ width: "80%", maxWidth: "800px", marginBottom: "60px" }}>
